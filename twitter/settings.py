@@ -91,7 +91,7 @@ DATABASES = {
         'HOST': '0.0.0.0',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': 'yourpassword',    # 这里是自己下载mysql时候输入两次的那个密码
+        'PASSWORD': 'yourpassword',
     }
 }
 
