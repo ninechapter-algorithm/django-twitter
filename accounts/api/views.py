@@ -65,15 +65,6 @@ class AccountViewSet(viewsets.ViewSet):
         """
         使用 username, email, password 进行注册
         """
-        # 不太优雅的写法
-        # username = request.data.get('username')
-        # if not username:
-        #     return Response("username required", status=400)
-        # password = request.data.get('password')
-        # if not password:
-        #     return Response("password required", status=400)
-        # if User.objects.filter(username=username).exists():
-        #     return Response("password required", status=400)
         serializer = SignupSerializer(data=request.data)
         if not serializer.is_valid():
             return Response({
